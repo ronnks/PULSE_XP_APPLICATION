@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane layoutX="-1.0" opacity="0.64" prefHeight="694.0" prefWidth="1007.0" style="-fx-background-color: blue;">
+            <children>
+                <AnchorPane layoutX="-7.0" prefHeight="79.0" prefWidth="143.0" style="-fx-background-color: white;" />
+                <AnchorPane layoutY="108.0" prefHeight="587.0" prefWidth="691.0" style="-fx-background-color: WHITE;">
+                    <children>
+                        <AnchorPane layoutX="9.0" layoutY="43.0" opacity="0.64" prefHeight="5.0" prefWidth="668.0" style="-fx-background-color: blue;" />
+                        <AnchorPane layoutX="248.0" layoutY="43.0" opacity="0.64" prefHeight="543.0" prefWidth="17.0" style="-fx-background-color: blue;" />
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="26.0" prefWidth="204.0" text="NAME" />
+                        <Label layoutX="275.0" layoutY="9.0" prefHeight="26.0" prefWidth="204.0" text="SERVICE" />
+                        <Label layoutX="265.0" layoutY="48.0" prefHeight="26.0" prefWidth="99.0" style="-fx-background-color: yellow;" text="Pizza sizes">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="265.0" layoutY="78.0" opacity="0.26" prefHeight="58.0" prefWidth="333.0" style="-fx-background-color: blue;" />
+                        <Button fx:id="B_small" layoutX="265.0" layoutY="85.0" mnemonicParsing="false" onAction="#Insert_Small_Size" prefHeight="45.0" prefWidth="77.0" text="Small" />
+                        <Button fx:id="B_medium" layoutX="346.0" layoutY="85.0" mnemonicParsing="false" onAction="#Insert_Medium_Size" prefHeight="45.0" prefWidth="77.0" text="Medium" />
+                        <Button fx:id="B_large" layoutX="429.0" layoutY="85.0" mnemonicParsing="false" onAction="#Insert_Large_Size" prefHeight="45.0" prefWidth="77.0" text="Large" />
+                        <Button fx:id="B_xlarge" layoutX="513.0" layoutY="85.0" mnemonicParsing="false" onAction="#Insert_XLarge_Size" prefHeight="45.0" prefWidth="77.0" text="X-Large" />
+                        <Label layoutX="265.0" layoutY="136.0" prefHeight="30.0" prefWidth="63.0" style="-fx-background-color: yellow;" text="Crusts">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="163.0" opacity="0.26" prefHeight="58.0" prefWidth="415.0" style="-fx-background-color: blue;" />
+                        <Button fx:id="B_glutenfree" layoutX="265.0" layoutY="170.0" mnemonicParsing="false" onAction="#Form_glutenFREE_Crust" prefHeight="45.0" prefWidth="77.0" text="Gluten free" />
+                        <Button fx:id="B_pan" layoutX="350.0" layoutY="170.0" mnemonicParsing="false" onAction="#Form_pan_Crust" prefHeight="45.0" prefWidth="52.0" text="Pan" />
+                        <Button fx:id="B_handtossed" layoutX="407.0" layoutY="170.0" mnemonicParsing="false" onAction="#Form_handtossed_Crust" prefHeight="45.0" prefWidth="99.0" text="HandTossed" />
+                        <Button fx:id="B_brooklyn" layoutX="513.0" layoutY="170.0" mnemonicParsing="false" onAction="#Form_brooklyn_Crust" prefHeight="45.0" prefWidth="77.0" text="Brooklyn" />
+                        <Button fx:id="B_thincrust" layoutX="598.0" layoutY="170.0" mnemonicParsing="false" onAction="#Form_thincrust_Crust" prefHeight="45.0" prefWidth="77.0" text="Thin crust" />
+                        <Label layoutX="265.0" layoutY="221.0" prefHeight="30.0" prefWidth="89.0" style="-fx-background-color: yellow;" text="Toppings">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="251.0" opacity="0.47" prefHeight="58.0" prefWidth="286.0" style="-fx-background-color: red;" />
+                        <Button fx:id="B_light" layoutX="271.0" layoutY="258.0" mnemonicParsing="false" onAction="#ADD_QUANTITY" prefHeight="45.0" prefWidth="77.0" text="Light" />
+                        <Button fx:id="B_extra" layoutX="364.0" layoutY="258.0" mnemonicParsing="false" onAction="#ADD_QUANTITY" prefHeight="45.0" prefWidth="77.0" text="Extra" />
+                        <Button fx:id="B_double" layoutX="458.0" layoutY="258.0" mnemonicParsing="false" onAction="#ADD_QUANTITY" prefHeight="45.0" prefWidth="77.0" text="Double" />
+                        <FlowPane layoutX="263.0" layoutY="308.0" opacity="0.59" prefHeight="137.0" prefWidth="399.0" style="-fx-background-color: blue;">
+                            <children>
+                                <Button fx:id="B_handtossed1" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="85.0" text="ranch sauce" />
+                                <Button fx:id="B_handtossed11" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="91.0" text="asiago cheese" />
+                                <Button fx:id="B_handtossed12" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="54.0" text="feta" />
+                                <Button fx:id="B_handtossed13" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="66.0" text="cheddar" />
+                                <Button fx:id="B_handtossed14" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="103.0" text="banana peppers" />
+                                <Button fx:id="B_handtossed15" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="83.0" text="black olives" />
+                                <Button fx:id="B_handtossed16" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="93.0" text="tomatoes" />
+                                <Button fx:id="B_handtossed17" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="124.0" text="provolone cheese" />
+                                <Button fx:id="B_handtossed18" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="99.0" text="marinara sauce" />
+                                <Button fx:id="B_handtossed19" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="66.0" text="sauage" />
+                                <Button fx:id="B_handtossed110" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="57.0" text="salami" />
+                                <Button fx:id="B_handtossed111" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="80.0" text="mushrooms" />
+                                <Button fx:id="B_handtossed112" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="69.0" text="chicken" />
+                                <Button fx:id="B_handtossed113" mnemonicParsing="false" onAction="#ADD_TOPPING" prefHeight="45.0" prefWidth="127.0" text="red roasted peppers" />
+                            </children>
+                        </FlowPane>
+                        <Button fx:id="B_back" layoutX="590.0" layoutY="259.0" mnemonicParsing="false" onAction="#BACK_TO_TOPPING_BUNCH" text="Back" />
+                        <Label layoutX="265.0" layoutY="445.0" prefHeight="30.0" prefWidth="63.0" style="-fx-background-color: yellow;" text="Others">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <FlowPane layoutX="264.0" layoutY="474.0" prefHeight="66.0" prefWidth="298.0" style="-fx-background-color: blue;">
+                            <children>
+                                <Button fx:id="B_half" mnemonicParsing="false" onAction="#Switch_TO_HALF_SECTION" prefHeight="64.0" prefWidth="99.0" text="HALF" />
+                                <Button fx:id="B_specials" mnemonicParsing="false" onAction="#Switch_TO_SPECIAL_PIZZAS_SECTION" prefHeight="64.0" prefWidth="99.0" text="SPECIALS" />
+                                <Button fx:id="B_instructions" mnemonicParsing="false" onAction="#Switch_TO_INSTRUCTION_SECTION" prefHeight="64.0" prefWidth="99.0" text="INSTRUCTIONS" />
+                            </children>
+                        </FlowPane>
+                        <Label contentDisplay="TOP" layoutX="3.0" layoutY="498.0" opacity="0.26" prefHeight="79.0" prefWidth="244.0" style="-fx-background-color: blue;" />
+                        <TextArea layoutX="3.0" layoutY="497.0" prefHeight="86.0" prefWidth="244.0" text="PAID: &#10;TOTAL: ">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </TextArea>
+                        <TextField fx:id="B_paid" layoutX="71.0" layoutY="507.0" onAction="#Paid_Amount" prefHeight="25.0" prefWidth="160.0" />
+                        <TextField fx:id="B_total" layoutX="85.0" layoutY="540.0" onAction="#Total_Amount" />
+                  <Label layoutX="264.0" layoutY="544.0" opacity="0.26" prefHeight="38.0" prefWidth="415.0" style="-fx-background-color: purple;" />
+                  <Button fx:id="B_medium12" layoutX="553.0" layoutY="48.0" mnemonicParsing="false" onAction="#Insert_Medium_Size" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: red;" />
+                  <Line endX="13.0" endY="13.5" layoutX="553.0" layoutY="63.0" startX="2.75" startY="-11.0" />
+                  <Line endX="3.70709228515625" endY="4.2071075439453125" layoutX="563.0" layoutY="73.0" startX="14.0" startY="-22.0" />
+                  <Line endX="5.5" endY="-30.0" layoutX="571.0" layoutY="81.0" startX="-14.5" startY="-30.0" />
+                  <Button fx:id="B_medium121" layoutX="520.0" layoutY="48.0" mnemonicParsing="false" onAction="#Insert_Medium_Size" prefHeight="30.0" prefWidth="27.0" style="-fx-background-color: red;" />
+                  <Line endX="21.5" endY="8.5" layoutX="523.0" layoutY="67.0" startX="10.75" startY="-17.25" />
+                  <Line endX="0.75" endY="5.25" layoutX="522.0" layoutY="71.0" startX="11.04290771484375" startY="-21.957107543945312" />
+                  <Line endX="2.0" endY="-27.0" layoutX="542.0" layoutY="103.0" startX="-19.5" startY="-27.0" />
+                  <Button fx:id="B_new" layoutX="376.0" layoutY="47.0" mnemonicParsing="false" onAction="#Insert_New_Item" prefHeight="30.0" prefWidth="52.0" style="-fx-background-color: GREEN;" text="NEW" />
+                  <Button fx:id="B_medium11" layoutX="443.0" layoutY="47.0" mnemonicParsing="false" onAction="#Delete_Item" prefHeight="30.0" prefWidth="57.0" style="-fx-background-color: RED;" text="DELETE" />
+                  <ListView fx:id="listview_order" editable="true" fixedCellSize="500.0" layoutX="4.0" layoutY="48.0" opacity="0.87" prefHeight="449.0" prefWidth="244.0" style="-fx-background-color: maroon;" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="683.0" layoutY="69.0" prefHeight="626.0" prefWidth="327.0" style="-fx-background-color: WHITE;">
+                    <children>
+                        <Button fx:id="welcome" layoutX="1.0" layoutY="95.0" mnemonicParsing="false" onAction="#Welcome" opacity="0.69" prefHeight="86.0" prefWidth="325.0" style="-fx-background-color: blue;" text="WELCOME" textFill="#f8f5f5">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="order" layoutX="2.0" layoutY="181.0" mnemonicParsing="false" onAction="#Order" opacity="0.69" prefHeight="86.0" prefWidth="325.0" style="-fx-background-color: blue;" text="ORDER" textFill="#fffbfb">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="others" layoutX="1.0" layoutY="267.0" mnemonicParsing="false" onAction="#Others" opacity="0.69" prefHeight="86.0" prefWidth="325.0" style="-fx-background-color: blue;" text="OTHERS" textFill="#f5f3f3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="coupns" layoutX="2.0" layoutY="353.0" mnemonicParsing="false" onAction="#Coupons" opacity="0.69" prefHeight="86.0" prefWidth="325.0" style="-fx-background-color: blue;" text="COUPONS" textFill="#f2eeee">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="payment" layoutX="1.0" layoutY="439.0" mnemonicParsing="false" onAction="#Payment" opacity="0.69" prefHeight="86.0" prefWidth="325.0" style="-fx-background-color: blue;" text="PAYMENT" textFill="#f2f0f0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="finish" layoutX="1.0" layoutY="525.0" mnemonicParsing="false" onAction="#Finish" prefHeight="101.0" prefWidth="325.0" style="-fx-background-color: blue;" text="FINISH" textFill="#f2efef">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="exit" layoutX="1.0" layoutY="1.0" mnemonicParsing="false" onAction="#EXIT" prefHeight="94.0" prefWidth="325.0" style="-fx-background-color: red;" text="EXIT" textFill="#0d0000">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <Label alignment="TOP_LEFT" layoutX="-2.0" layoutY="8.0" prefHeight="58.0" prefWidth="1007.0" text="PULSE">
+            <font>
+                <Font size="38.0" />
+            </font>
+        </Label>
+        <Label layoutX="250.0" layoutY="29.0" prefHeight="45.0" prefWidth="129.0" style="-fx-background-color: WHITE;" text="Carryout time  20 min" />
+        <Label layoutX="412.0" layoutY="29.0" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: WHITE;" text="Delivery time  45 min" />
+    </children>
+</AnchorPane>
