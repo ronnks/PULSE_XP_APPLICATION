@@ -5,6 +5,7 @@
  
  <p>It is a food order processing platform, featured on both <b><i>desktop</i></b> for stores inside processing and <b><i>web</i></b> for online ordering.</p>
 
+<div>
 <pre>
 -->>IDE To Be Used -->> Intelij.
     .The initial concetration
@@ -12,11 +13,12 @@
 -->>Java Framework -->> Spring Framework
 -->>Database management software -->> Hibernate
 </pre>
+</div>
 
-<h2>**DESIGNING OF THE SYSTEM STILL IN PROGRESS.</h2>
+<div><h2>**DESIGNING OF THE SYSTEM STILL IN PROGRESS. STILL IN IT'S EARLY STAGES.</h2></div>
 
-<h2>**IMPLEMENTATION OF THE DESKTOP UI DESIGN CODE BASE STILL IN PROGRESS.</h2>
+<div><h2>**IMPLEMENTATION OF THE DESKTOP UI DESIGN CODE BASE STILL IN PROGRESS.</h2></div>
 
-<h2>Problems still faced in the implementation of the UI.</h2>
+<div><h2>Problems still faced in the implementation of the UI.</h2></div>
 
 
