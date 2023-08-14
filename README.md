@@ -30,4 +30,21 @@
  </ul>
 </div>
 
+<article>
+  <h3>Libraries/Support/Help</h3>
+  <article>
+    <h4>Java API</h4>
+    <p>Where the entire java language functionality and what not can be found, in form of classes, to their attributes, to their methods can be found. 
+       This forced me to apply even solid and robust action efficient solutions to most challenges.</p>
+  </article>
+  <article>
+    <h4>Google</h4>
+    <p>This specific source kicks in when a small sized problem surfaces rondomly without notice.</p>
+  </article>
+  <article>
+    <h4>YouTube</h4>
+    <p>Now for broad studies or when trying to understand a huge concept, this is where <i>YouTube</i> comes into play to save the day.</p>
+  </article>
+</article>
+
 
