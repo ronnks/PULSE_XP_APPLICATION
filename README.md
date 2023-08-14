@@ -3,7 +3,7 @@
 
  <h1>PULSE XP SYSTEM</h1> 
  
- <p>It is a food order processing platform, featured on both <b><i>desktop</i></b>b> for stores inside processing and <b><i>web</i></b>b> for online ordering.</p>
+ <p>It is a food order processing platform, featured on both <b><i>desktop</i></b> for stores inside processing and <b><i>web</i></b> for online ordering.</p>
 
 <pre>
 -->>IDE To Be Used -->> Intelij.
