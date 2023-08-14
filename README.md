@@ -7,8 +7,8 @@
 
 <div>
 <pre>
--->>IDE To Be Used -->> Intelij.
-    .The initial concetration
+-->>Desktop development IDE To Be Used -->> Intelij.
+-->>Programming language -->> Java.
 -->>Project production to Success Software -->> Agile Scrums
 -->>Java Framework -->> Spring Framework
 -->>Database management software -->> Hibernate
@@ -46,5 +46,15 @@
     <p>Now for broad studies or when trying to understand a huge concept, this is where <i>YouTube</i> comes into play to save the day.</p>
   </article>
 </article>
+
+div>
+<pre>
+ <h2>Future technologies which will be applied or embedded in the system.</h2>
+-->>Web development IDE To Be Used -->> Visual Code Studio
+-->>Programming language -->> JavaScript, CSS, HTML
+-->>JavaScript Framework -->> REACT
+-->>Database management software -->> Firebase
+</pre>
+</div>
 
 
