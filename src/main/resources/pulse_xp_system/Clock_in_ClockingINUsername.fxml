@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulse_xp_system.Clock_in_ClockingINUsername_Controller">
+    <AnchorPane fx:id="ClockInUsername_WINDOW" opacity="0.64" prefHeight="694.0" prefWidth="1007.0" style="-fx-background-color: blue;">
+        <TextArea fx:id="usernameClockIN" layoutX="28.0" layoutY="59.0" onKeyReleased="#verifyUsernameCLOCKIN" onKeyTyped="#getLogIN" prefHeight="61.0" prefWidth="277.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </TextArea>
+        <Label fx:id="loginLabel" layoutX="29.0" layoutY="8.0" prefHeight="31.0" prefWidth="208.0" style="-fx-background-color: orange;" text="ENTER LOG IN">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="summaryBOX" layoutX="414.0" layoutY="67.0" prefHeight="611.0" prefWidth="580.0" style="-fx-background-color: white;">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="summaryLabel" layoutX="414.0" layoutY="7.0" prefHeight="31.0" prefWidth="208.0" style="-fx-background-color: GREEN;" text="LOG IN SUMMARY">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="inputCancel" layoutX="28.0" layoutY="144.0" mnemonicParsing="false" onAction="#actionOnCancelButton" prefHeight="61.0" prefWidth="129.0" style="-fx-background-color: red;" text="CANCEL">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Label fx:id="nameLabel_TITLE" layoutX="423.0" layoutY="97.0" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: GREEN;" text="NAME:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="timeClockedIN_Label_TITLE" layoutX="423.0" layoutY="143.0" prefHeight="31.0" prefWidth="137.0" style="-fx-background-color: GREEN;" text="Clock in time:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="label_TITLE_ForPosition" layoutX="423.0" layoutY="187.0" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: GREEN;" text="Position: ">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="option2_Label" layoutX="423.0" layoutY="319.0" onDragDetected="#update_LABEL" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="option1_Label" layoutX="423.0" layoutY="274.0" onDragDetected="#update_LABEL" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="nameLabel" layoutX="527.0" layoutY="97.0" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="timeClockedIN_Label" layoutX="583.0" layoutY="143.0" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelForPosition" layoutX="527.0" layoutY="187.0" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="option1_Input" layoutX="650.0" layoutY="274.0" onDragDetected="#update_INPUT" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="option2_Input" layoutX="650.0" layoutY="319.0" onDragDetected="#update_INPUT" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="option3_Label" layoutX="423.0" layoutY="357.0" onDragDetected="#update_LABEL" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="option3_Input" layoutX="650.0" layoutY="357.0" onDragDetected="#update_INPUT" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="dateLabel" layoutX="660.0" layoutY="6.0" onDragDetected="#updateLabel" prefHeight="31.0" prefWidth="330.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="moreINFO_Label" layoutX="423.0" layoutY="230.0" onDragDetected="#update_LABEL" prefHeight="31.0" prefWidth="208.0">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="alertLabel" layoutX="28.0" layoutY="269.0" onDragDetected="#updateAlertLabel" prefHeight="131.0" prefWidth="368.0" wrapText="true">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="inputClockIN" layoutX="176.0" layoutY="144.0" mnemonicParsing="false" onAction="#actionOnClockINButton" prefHeight="61.0" prefWidth="129.0" style="-fx-background-color: YELLOW;" text="CLOCK IN">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </AnchorPane>
+</AnchorPane>
