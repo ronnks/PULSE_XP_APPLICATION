@@ -1,5 +1,8 @@
 package pulse_xp_system;
 
+import BaeseClasses.AddressSlot.AddressInterface;
+import BaeseClasses.CustomerSlot.CustomerInterface;
+import BaeseClasses.CustomerSlot.SaveCustomer;
 import javafx.fxml.FXML;
 
 import java.awt.*;
@@ -17,7 +20,10 @@ public class Order_OpenUp_WELCOME_CONTROLLER {
 
     @FXML
     void Address1(ActionEvent event) {
-
+        String getAddress = address1+" "+address2;
+        CustomerInterface.getCustomer().setTelephoneNumber(telephone_number.getText());
+        CustomerInterface.getCustomer().setCustomerName(name.getText());
+        AddressInterface.getAddress().
     }
 
     @FXML

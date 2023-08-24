@@ -1,4 +1,8 @@
-package BaeseClasses;
+package BaeseClasses.CustomerSlot;
+
+//This class describes all parts of an customer which is to be retrieved, processed and stored.
+
+import BaeseClasses.AddressSlot.Address;
 
 public class Customer{
     private String customerName;
@@ -9,6 +13,12 @@ public class Customer{
         this.telephoneNumber = telephone;
         this.customerName = name;
         this.address = address;
+    }
+
+    public Customer(String telephone, String name, String Address){
+        this.telephoneNumber = telephone;
+        this.customerName = name;
+        address = new Address(Address);
     }
 
     public Customer(){

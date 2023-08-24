@@ -1,4 +1,6 @@
-package BaeseClasses;
+package BaeseClasses.AddressSlot;
+
+//This class describes all parts of an address which is to be retrieved, processed and stored.
 
 public class Address {
     private String streetNumber;
@@ -7,6 +9,12 @@ public class Address {
     private String city;
     private String state;
     private String zipCode;
+
+    private String stringAddress;
+
+    public Address(String address){
+        this.stringAddress = address;
+    }
 
     public Address(String streetNumber, String streetName, String apartmentNumber, String city, String state, String zipCode){
         this.apartmentNumber = apartmentNumber;
@@ -74,6 +82,10 @@ public class Address {
         return zipCode;
     }
 
+    public String getAddress(){
+        return this.stringAddress;
+    }
+
     //method breaks down logic for easier use of the "equals" method...
     private boolean equalsHelper(Object object){
         Address address = (Address) object;
@@ -92,6 +104,11 @@ public class Address {
         }
         return false;
     }
+
+    public String toString2(){
+        return this.stringAddress;
+    }
+
     @Override
     public String toString(){
         return this.getStreetNumber() + " " + this.getStreetName() + "Apt " + this.getApartmentNumber() + " " + this.getCity() + " " + this.getState() + " " +

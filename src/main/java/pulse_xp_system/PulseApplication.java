@@ -12,14 +12,10 @@ import java.util.stream.Stream;
 public class PulseApplication extends javafx.application.Application {
     @Override
     public void start(javafx.stage.Stage stage) throws java.io.IOException {
-<<<<<<< HEAD
-=======
         /**
          *   RUNNING THE APP IN PROGRESS.....
          */
 
-
->>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         try{
             javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(PulseApplication.class.getResource(("Log_in_Clock_in_SCREEN.fxml")));
             javafx.scene.Scene scene = new javafx.scene.Scene(fxmlLoader.load());
@@ -39,12 +35,7 @@ public class PulseApplication extends javafx.application.Application {
         launch();
     }
 
-
-<<<<<<< HEAD
     /**              BELOW ARE ALL CLASSES USED FOR PROGRAM TESTING
-=======
-    /**
->>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
      * ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
      *
             *  This Class describes the Employee functionality.
@@ -143,48 +134,48 @@ public class PulseApplication extends javafx.application.Application {
      * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
      *  The class helps out to using the Tester employee categories for the project initializaion.
      */
-    public static class EmployeeTesting{
+    public static class EmployeeTesting {
 
         /**
-         *   LinkedHashMap ---> For mapping scheduled team members {Employees}.
+         * LinkedHashMap ---> For mapping scheduled team members {Employees}.
          */
         static public java.util.LinkedHashMap<String, String> onScheduleTeam = new java.util.LinkedHashMap<>();
 
         /**
-         *   LinkedHashMap ---> For mapping team members already in the system {Employees}.
+         * LinkedHashMap ---> For mapping team members already in the system {Employees}.
          */
         static public java.util.LinkedHashMap<String, String> inSystemTeam = new java.util.LinkedHashMap<>();
 
         /**
-         *   HashMap ---> For mapping job position short forms to their full forms. Full job titles.
+         * HashMap ---> For mapping job position short forms to their full forms. Full job titles.
          */
         static public java.util.HashMap<String, String> fullJobPositionTitleMapper = new java.util.HashMap<>();
 
         /**
-         *   HashMap ---> For mapping users usernames to their passwords.
+         * HashMap ---> For mapping users usernames to their passwords.
          */
         static public java.util.HashMap<String, String> USER_userName_Password_Map = new java.util.HashMap<>();
 
-       /**
-         *   Team member List.
+        /**
+         * Team member List.
          */
         public static java.util.List<Employee> employeesList = new java.util.ArrayList<>();
 
         /**
-         *   Clocked in Team member List. These are employees who have put in a correct clock in username.
+         * Clocked in Team member List. These are employees who have put in a correct clock in username.
          */
         public static java.util.List<String> clockedInUser_List = new java.util.ArrayList<>();
 
         /**
-         *   VerifiedClocked in Team member List. There are employees who have succefully clocked in.
+         * VerifiedClocked in Team member List. There are employees who have succefully clocked in.
          */
         public static java.util.List<String> verifiedClockedInUser_List = new java.util.ArrayList<>();
 
         /**
-         *  Method for holding some functionality to be used in test outs of some project stage insertions and
-         *  verifications.
+         * Method for holding some functionality to be used in test outs of some project stage insertions and
+         * verifications.
          */
-        public static void teamMemberInsertion(){
+        public static void teamMemberInsertion() {
             /**
              *  Adding employees to the List.
              */
@@ -198,7 +189,7 @@ public class PulseApplication extends javafx.application.Application {
             employeesList.add(new Employee("Nabil", "Ehranfgian", "INS", "5044", "504"));
             employeesList.add(new Employee("Carsten", "Artez", "DR", "5673", "56"));
 
-             /**
+            /**
              * Short to full name of the position.
              */
             fullJobPositionTitleMapper.put("DM", "District Manager");
@@ -209,41 +200,12 @@ public class PulseApplication extends javafx.application.Application {
 
             for (Employee employee : employeesList) {
                 inSystemTeam.put(employee.getUserName(), employee.getFullName());
-<<<<<<< HEAD
                 USER_userName_Password_Map.put(employee.getUserName(), employee.getPassword());
-=======
->>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
             }
 
             for (int i = 0; i < 4; i++) {
                 onScheduleTeam.put(employeesList.get(i).getUserName(), employeesList.get(i).getFullName());
             }
-<<<<<<< HEAD
-        }
-
-        public static void main(String[] args) {
-            String myNum = "055";
-
-            new EmployeeTesting();
-            teamMemberInsertion();
-
-            var list = EmployeeTesting.employeesList.stream().map(employee -> employee.getPassword())
-                            .anyMatch(password -> myNum.equals(password));
-
-            System.out.println(list);
-=======
-
-            for (Employee employee : employeesList) {
-                USER_userName_Password_Map.put(employee.getUserName(), employee.getPassword());
-            }
-        }
-
-        public static void main(String[] args) {
-
-            System.out.println(EmployeeTesting.clockedInUser_List);
-            System.out.println(EmployeeTesting.verifiedClockedInUser_List);
-
->>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         }
     }
 
@@ -264,16 +226,13 @@ public class PulseApplication extends javafx.application.Application {
             userLogIN_USERNAME = USERNAME;
             getUserLogIN_PASSWORD = PASSWORD;
         }
-<<<<<<< HEAD
         public static void main(String[] args) {
             VerifyUserLog_IN.userLogIN_USERNAME = "4367";
             System.out.println(userLogIN_USERNAME);
 
             VerifyUserLog_IN.userLogIN_USERNAME = "3684";
             System.out.println(userLogIN_USERNAME);
-
-=======
-
+        }
 
         public VerifyUserLog_IN(){
 
@@ -313,7 +272,6 @@ public class PulseApplication extends javafx.application.Application {
                     "userLogIN_USERNAME='" + userLogIN_USERNAME + '\'' +
                     ", getUserLogIN_PASSWORD='" + getUserLogIN_PASSWORD + '\'' +
                     '}';
->>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         }
     }
 }

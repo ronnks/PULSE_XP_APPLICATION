@@ -1,5 +1,8 @@
 package BaeseClasses;
 
+import BaeseClasses.AddressSlot.Address;
+import BaeseClasses.CustomerSlot.Customer;
+
 import java.util.ArrayList;
 
 /**
