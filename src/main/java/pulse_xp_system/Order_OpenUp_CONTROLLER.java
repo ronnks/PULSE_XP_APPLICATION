@@ -1,4 +1,5 @@
 package pulse_xp_system;
+<<<<<<< HEAD
           //   the class features a full description for the controlling of the window and components of the "Order_OpenUp_CONTROLLER".
 
 import javafx.event.ActionEvent;
@@ -20,6 +21,16 @@ public class Order_OpenUp_CONTROLLER {
         welcome.setDisable(true);
     }
 
+=======
+
+import javafx.event.ActionEvent;
+
+/**
+        *     the class features a full description for the controlling of the window and components of the "Order_OpenUp_CONTROLLER".
+        */
+
+public class Order_OpenUp_CONTROLLER {
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
     public void Log_Out(ActionEvent actionEvent) {
     }
 

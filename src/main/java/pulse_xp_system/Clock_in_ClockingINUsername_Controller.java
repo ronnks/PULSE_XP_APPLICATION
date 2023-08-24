@@ -103,7 +103,11 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
      *  the labels hold all appropreiate interface labels for holding values and excuting action
      */
     @javafx.fxml.FXML
+<<<<<<< HEAD
     private javafx.scene.control.Label nameLabel = new Label(), timeClockedIN_Label = new Label(), labelForPosition = new Label(), option1_Label = new Label(), option2_Label = new Label(), option1_Input = new Label(), option2_Input = new Label(), alertLabel = new Label();
+=======
+    private javafx.scene.control.Label nameLabel, timeClockedIN_Label, labelForPosition, option1_Label, option2_Label, option1_Input, option2_Input, alertLabel;
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
 
     private javafx.stage.Stage UsernameCLOCKINstage = new Stage();
 
@@ -128,14 +132,21 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
      */
     @javafx.fxml.FXML
     private void insertKey(javafx.event.ActionEvent actionEvent) {
+<<<<<<< HEAD
         System.out.println("Inside insertKey(javafx.event.ActionEvent actionEvent) method");
+=======
+
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         /**
          *  Before there is any text in the "usernameClockIN" textArea, keep the ""Clock in" disabled.
          *  */
         if(usernameClockIN.getText() == null){
             inputClockIN.setDisable(true);
         }
+<<<<<<< HEAD
         System.out.println("Done with insertKey(javafx.event.ActionEvent actionEvent) method");
+=======
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
     }
 
     /**
@@ -168,15 +179,30 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
 
     @Override
     public void actionOnCancelButton(javafx.event.ActionEvent actionEvent) {
+<<<<<<< HEAD
         System.out.println("Inside actionOnCancelButton(javafx.event.ActionEvent actionEvent) method");
+=======
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         if(inputCancel.isFocused()) {
             ClockInUsername_STAGE = (javafx.stage.Stage) ClockInUsername_WINDOW.getScene().getWindow();
             ClockInUsername_STAGE.close();
         }
+<<<<<<< HEAD
         System.out.println("Done with actionOnCancelButton(javafx.event.ActionEvent actionEvent) method");
     }
 
     private void clockINButtonHelper1(){
+=======
+    }
+
+    @Override
+    public void actionOnClockINButton(javafx.event.ActionEvent actionEvent) {
+        username = usernameClockIN.getText();
+
+        new PulseApplication.EmployeeTesting();
+        teamMemberInsertion();
+
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         /**
          * matches the predicate to find if the entered pattern matches any username in "onScheduleTeam".
          */
@@ -186,14 +212,38 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
                 .anyMatch(_username -> _username.equals(username));
 
         /**
+<<<<<<< HEAD
+=======
+         * matches the predicate to find if the entered pattern matches any username in "onScheduleTeam".
+         */
+        var ifUsernameIN_inSystemTeam = PulseApplication.EmployeeTesting.inSystemTeam.keySet()
+                .stream()
+                .map(_username -> _username)
+                .anyMatch(_username -> _username.equals(username));
+
+
+        /**
+         * getting and marking usernames in the "inSystemTeam".
+         */
+        var username_inSystemTeam = PulseApplication.EmployeeTesting.inSystemTeam.keySet()
+                .stream()
+                .map(_username -> _username)
+                .anyMatch(_username -> _username.equals(username));
+
+
+        /**
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
          * IF: text in the textArea is equal to any employee usernames in the "onScheduleTeam";
          *      Switch to the "Clock_in_Password" stage for the next process.
          */
         if (ifUsernameIN_onScheduleTeam) {
             PulseApplication.EmployeeTesting.clockedInUser_List.add(username);
+<<<<<<< HEAD
 
             ClockInUsername_STAGE = (javafx.stage.Stage) ClockInUsername_WINDOW.getScene().getWindow();
             ClockInUsername_STAGE.close();
+=======
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
             try {
 
                 javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(PulseApplication.class.getResource(("Clock_in_Password.fxml")));
@@ -205,6 +255,7 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
                 System.out.println(exception.getMessage());
             }
 
+<<<<<<< HEAD
         }
 
     }
@@ -224,12 +275,16 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
                 .anyMatch(_username -> _username.equals(username));
 
         if (!ifUsernameIN_onScheduleTeam && ifUsernameIN_inSystemTeam) {
+=======
+        }else if (!ifUsernameIN_onScheduleTeam && ifUsernameIN_inSystemTeam) {
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
             /**
              *   if a user is not scheduled for the day, they require manager's authorization to pass by the clock in passage.
              */
             alertLabel.setText("Not Scheduled for today!");
 
             try {
+<<<<<<< HEAD
                 LoadingWindows.openLogInOverride().getClass();
             } catch (Exception exception) {
                 System.out.println(exception.getMessage());
@@ -249,6 +304,23 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
                 .anyMatch(_username -> _username.equals(username));
 
         if (!ifUsernameIN_onScheduleTeam && !ifUsernameIN_inSystemTeam) {
+=======
+                javafx.stage.Stage override_Username_STAGE = new Stage();
+                javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(PulseApplication.class.getResource(("Log_in_Username.fxml")));
+
+                LogInUsername logInUsername = new LogInUsername();
+                logInUsername.changeLoginLabel("Manager Username");
+
+                javafx.scene.Scene scene = new javafx.scene.Scene(fxmlLoader.load());
+                override_Username_STAGE.setScene(scene);
+                override_Username_STAGE.show();
+
+            } catch (Exception exception) {
+                System.out.println(exception.getMessage());
+            }
+
+        }else if (!ifUsernameIN_onScheduleTeam && !ifUsernameIN_inSystemTeam) {
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
             /**
              *   if an user is not in the "inSystemTeam" Map which is the registered employee database , they shoud first be registered in the system.
              */
@@ -257,6 +329,7 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
         }
     }
 
+<<<<<<< HEAD
     @Override
     public void actionOnClockINButton(javafx.event.ActionEvent actionEvent) {
         System.out.println("Inside actionOnClockINButton(javafx.event.ActionEvent actionEvent) method");
@@ -275,6 +348,9 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
 
     public void getLogIN(KeyEvent event) {
         System.out.println("Inside getLogIN(KeyEvent event) method");
+=======
+    public void getLogIN(KeyEvent event) {
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         username = usernameClockIN.getText();
 
         new PulseApplication.EmployeeTesting();
@@ -311,6 +387,9 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
             timeClockedIN_Label.setText("");
             inputClockIN.setDisable(true);
         }
+<<<<<<< HEAD
         System.out.println("Done with getLogIN(KeyEvent event) method");
+=======
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
     }
 }

@@ -12,6 +12,14 @@ import java.util.stream.Stream;
 public class PulseApplication extends javafx.application.Application {
     @Override
     public void start(javafx.stage.Stage stage) throws java.io.IOException {
+<<<<<<< HEAD
+=======
+        /**
+         *   RUNNING THE APP IN PROGRESS.....
+         */
+
+
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         try{
             javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(PulseApplication.class.getResource(("Log_in_Clock_in_SCREEN.fxml")));
             javafx.scene.Scene scene = new javafx.scene.Scene(fxmlLoader.load());
@@ -32,7 +40,11 @@ public class PulseApplication extends javafx.application.Application {
     }
 
 
+<<<<<<< HEAD
     /**              BELOW ARE ALL CLASSES USED FOR PROGRAM TESTING
+=======
+    /**
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
      * ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
      *
             *  This Class describes the Employee functionality.
@@ -197,12 +209,16 @@ public class PulseApplication extends javafx.application.Application {
 
             for (Employee employee : employeesList) {
                 inSystemTeam.put(employee.getUserName(), employee.getFullName());
+<<<<<<< HEAD
                 USER_userName_Password_Map.put(employee.getUserName(), employee.getPassword());
+=======
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
             }
 
             for (int i = 0; i < 4; i++) {
                 onScheduleTeam.put(employeesList.get(i).getUserName(), employeesList.get(i).getFullName());
             }
+<<<<<<< HEAD
         }
 
         public static void main(String[] args) {
@@ -215,6 +231,19 @@ public class PulseApplication extends javafx.application.Application {
                             .anyMatch(password -> myNum.equals(password));
 
             System.out.println(list);
+=======
+
+            for (Employee employee : employeesList) {
+                USER_userName_Password_Map.put(employee.getUserName(), employee.getPassword());
+            }
+        }
+
+        public static void main(String[] args) {
+
+            System.out.println(EmployeeTesting.clockedInUser_List);
+            System.out.println(EmployeeTesting.verifiedClockedInUser_List);
+
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         }
     }
 
@@ -235,6 +264,7 @@ public class PulseApplication extends javafx.application.Application {
             userLogIN_USERNAME = USERNAME;
             getUserLogIN_PASSWORD = PASSWORD;
         }
+<<<<<<< HEAD
         public static void main(String[] args) {
             VerifyUserLog_IN.userLogIN_USERNAME = "4367";
             System.out.println(userLogIN_USERNAME);
@@ -242,6 +272,48 @@ public class PulseApplication extends javafx.application.Application {
             VerifyUserLog_IN.userLogIN_USERNAME = "3684";
             System.out.println(userLogIN_USERNAME);
 
+=======
+
+
+        public VerifyUserLog_IN(){
+
+        }
+
+        public static String getUserLogIN_USERNAME() {
+            return userLogIN_USERNAME;
+        }
+
+        public static void setUserLogIN_USERNAME(String USERNAME) {
+            userLogIN_USERNAME = USERNAME;
+        }
+
+        public static String getGetUserLogIN_PASSWORD() {
+            return getUserLogIN_PASSWORD;
+        }
+
+        public static void setGetUserLogIN_PASSWORD(String PASSWORD) {
+            getUserLogIN_PASSWORD = PASSWORD;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof VerifyUserLog_IN that)) return false;
+            return java.util.Objects.equals(getUserLogIN_USERNAME(), that.getUserLogIN_USERNAME()) && java.util.Objects.equals(getGetUserLogIN_PASSWORD(), that.getGetUserLogIN_PASSWORD());
+        }
+
+        @Override
+        public int hashCode() {
+            return java.util.Objects.hash(getGetUserLogIN_PASSWORD());
+        }
+
+        @Override
+        public String toString() {
+            return "VerifyUserLog_IN{" +
+                    "userLogIN_USERNAME='" + userLogIN_USERNAME + '\'' +
+                    ", getUserLogIN_PASSWORD='" + getUserLogIN_PASSWORD + '\'' +
+                    '}';
+>>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
         }
     }
 }
