@@ -49,8 +49,6 @@ public class Log_in_Clock_in_SCREEN_Controller{
         if(login.isFocused()) {
            //clockin.setDisable(true);
            try {
-               Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-
                 Parent fxmlLoader = FXMLLoader.load(getClass().getResource(("Log_in_Username.fxml")));
                 javafx.scene.Scene scene = new javafx.scene.Scene(fxmlLoader);
                 loadingLogIN_STAGE.setScene(scene);

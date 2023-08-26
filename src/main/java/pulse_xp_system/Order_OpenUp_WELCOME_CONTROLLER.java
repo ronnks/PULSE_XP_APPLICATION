@@ -23,7 +23,7 @@ public class Order_OpenUp_WELCOME_CONTROLLER {
         String getAddress = address1+" "+address2;
         CustomerInterface.getCustomer().setTelephoneNumber(telephone_number.getText());
         CustomerInterface.getCustomer().setCustomerName(name.getText());
-        AddressInterface.getAddress().
+        //AddressInterface.getAddress().
     }
 
     @FXML
