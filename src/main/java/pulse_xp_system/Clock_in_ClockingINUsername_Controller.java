@@ -230,7 +230,7 @@ public class Clock_in_ClockingINUsername_Controller implements ActionForCancelBu
             alertLabel.setText("Not Scheduled for today!");
 
             try {
-                LoadingWindows.openLogInOverride().getClass();
+                LoadingWindows.logInOverride().getClass();
             } catch (Exception exception) {
                 System.out.println(exception.getMessage());
             }

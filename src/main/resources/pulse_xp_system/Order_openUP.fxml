@@ -76,14 +76,11 @@
                                 <Font size="20.0" />
                             </font>
                         </Button>
-<<<<<<< HEAD
-=======
                   <Button fx:id="callerID41" mnemonicParsing="false" opacity="0.47" prefHeight="532.0" prefWidth="327.0">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
->>>>>>> 3f0bb5f52f2e28456de37fcec414e7585a435211
                     </children>
                 </AnchorPane>
                 <Button fx:id="callerID1" layoutX="22.0" layoutY="170.0" mnemonicParsing="false" onAction="#CALLER__ID" opacity="0.47" prefHeight="206.0" prefWidth="144.0">

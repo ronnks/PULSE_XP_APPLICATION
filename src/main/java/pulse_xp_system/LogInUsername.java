@@ -56,8 +56,7 @@ public class LogInUsername implements ActionForCancelButton, ActionForOkButton{
     @Override
     public void actionOnCancelButton(javafx.event.ActionEvent actionEvent) {
         if(inputCancel.isFocused()) {
-            logIN_Username_STAGE = (javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow();
-            logIN_Username_STAGE.close();
+            LoadingWindows.loginUsername((javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow()).close();
         }
     }
     @javafx.fxml.FXML
@@ -70,10 +69,8 @@ public class LogInUsername implements ActionForCancelButton, ActionForOkButton{
         teamMemberInsertion();
 
         if(ClockINPassword.ifUserClocked){
-            LoadingWindows.logInClockIn().close();
-            logIN_Username_STAGE = (javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow();
-            logIN_Username_STAGE.close();
-            LoadingWindows.orderOpenUp();
+            LoadingWindows.loginUsername((javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow()).close();
+            LoadingWindows.orderOpenUp().show();
         }else {
             logIN_Label.setText("Invalid Login");
         }
