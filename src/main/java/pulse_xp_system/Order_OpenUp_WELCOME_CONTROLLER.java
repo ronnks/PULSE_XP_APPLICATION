@@ -1,22 +1,24 @@
 package pulse_xp_system;
 
-import BaeseClasses.AddressSlot.AddressInterface;
 import BaeseClasses.CustomerSlot.CustomerInterface;
-import BaeseClasses.CustomerSlot.SaveCustomer;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class Order_OpenUp_WELCOME_CONTROLLER {
 
     @FXML
-    private TextField address1, address2, delivery_instructions, emailString, instore_instructions, name,
-            telephone_number;
+    private TextField address1, address2, name, emailString, telephone_number;
 
     @FXML
-    private Button carryout, coupns, coupon1, coupon2, coupon3, coupon4, coupon5, coupon6, coupon7
-            , coupon8, customer_info,  delivery, exit, finish, order,  others, payment, rewards, welcome;
+    private Button carryout, coupns, coupon1, coupon2, coupon3, coupon4, coupon5, coupon6, coupon7, coupon8,
+
+    customer_info, delivery, exit, finish, order, others, payment, rewards, welcome;
+
+    @FXML
+    private TextArea delivery_instructions, instore_instructions;
 
     @FXML
     void Address1(ActionEvent event) {

@@ -1,6 +1,7 @@
 package pulse_xp_system;
 
 import javafx.scene.control.Label;
+import javafx.stage.StageStyle;
 
 import static pulse_xp_system.PulseApplication.EmployeeTesting.USER_userName_Password_Map;
 import static pulse_xp_system.PulseApplication.EmployeeTesting.teamMemberInsertion;
@@ -38,7 +39,7 @@ public class LogInUsername implements ActionForCancelButton, ActionForOkButton{
     /**
      *  Stage for this. window.
      */
-    javafx.stage.Stage logIN_Username_STAGE;
+    private final javafx.stage.Stage logIN_Username_STAGE = (javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow();
 
     /**
      *  Control "inputCancel" Button, event action to be implemented in the implemented method of actionForCancelButton
@@ -49,6 +50,11 @@ public class LogInUsername implements ActionForCancelButton, ActionForOkButton{
 
     private String getUsername; // Stores the input username of a user / employee
 
+    /*public void initialize(){
+        logIN_Username_STAGE.initStyle(StageStyle.UNDECORATED);
+    }*/
+
+
     public void setLogIN_Label(String text){
         this.logIN_Label.setText(text);
     }
@@ -56,7 +62,7 @@ public class LogInUsername implements ActionForCancelButton, ActionForOkButton{
     @Override
     public void actionOnCancelButton(javafx.event.ActionEvent actionEvent) {
         if(inputCancel.isFocused()) {
-            LoadingWindows.loginUsername((javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow()).close();
+            LoadingWindows.loginUsername(logIN_Username_STAGE).close();
         }
     }
     @javafx.fxml.FXML
@@ -69,7 +75,7 @@ public class LogInUsername implements ActionForCancelButton, ActionForOkButton{
         teamMemberInsertion();
 
         if(ClockINPassword.ifUserClocked){
-            LoadingWindows.loginUsername((javafx.stage.Stage) logIN_Username_WINDOW.getScene().getWindow()).close();
+            LoadingWindows.loginUsername(logIN_Username_STAGE).close();
             LoadingWindows.orderOpenUp().show();
         }else {
             logIN_Label.setText("Invalid Login");

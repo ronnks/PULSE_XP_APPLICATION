@@ -6,27 +6,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="logIN_Username_WINDOW" prefHeight="196.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulse_xp_system.LogInUsername">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="196.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pulse_xp_system.LogInUsername">
    <children>
-      <TextArea fx:id="logIN_Field" layoutX="33.0" layoutY="56.0" onDragDetected="#verifyLogIN" prefHeight="61.0" prefWidth="180.0">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </TextArea>
-      <Label fx:id="logIN_Label" layoutX="33.0" layoutY="14.0" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: orange;" text="Log In">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Button fx:id="inputCancel" layoutX="33.0" layoutY="135.0" mnemonicParsing="false" onAction="#actionOnCancelButton" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: red;" text="CANCEL">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="inputOK" layoutX="157.0" layoutY="135.0" mnemonicParsing="false" onAction="#actionOnOkButton" prefHeight="37.0" prefWidth="56.0" style="-fx-background-color: GREEN;" text="OK">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Button>
+      <AnchorPane fx:id="logIN_Username_WINDOW" prefHeight="196.0" prefWidth="244.0">
+         <children>
+            <TextArea fx:id="logIN_Field" layoutX="33.0" layoutY="56.0" onDragDetected="#verifyLogIN" prefHeight="61.0" prefWidth="180.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="logIN_Label" layoutX="33.0" layoutY="14.0" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: orange;" text="Log In">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="inputCancel" layoutX="33.0" layoutY="135.0" mnemonicParsing="false" onAction="#actionOnCancelButton" prefHeight="44.0" prefWidth="119.0" style="-fx-background-color: red;" text="CANCEL">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="inputOK" layoutX="157.0" layoutY="135.0" mnemonicParsing="false" onAction="#actionOnOkButton" prefHeight="37.0" prefWidth="56.0" style="-fx-background-color: GREEN;" text="OK">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

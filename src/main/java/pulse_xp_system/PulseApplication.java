@@ -12,19 +12,7 @@ import java.util.stream.Stream;
 public class PulseApplication extends javafx.application.Application {
     @Override
     public void start(javafx.stage.Stage stage) throws java.io.IOException {
-        /**
-         *   RUNNING THE APP IN PROGRESS.....
-         */
-
-        try{
-            javafx.fxml.FXMLLoader fxmlLoader = new javafx.fxml.FXMLLoader(PulseApplication.class.getResource(("Log_in_Clock_in_SCREEN.fxml")));
-            javafx.scene.Scene scene = new javafx.scene.Scene(fxmlLoader.load());
-            stage.setScene(scene);
-            stage.show();
-
-        }catch (Exception exception){
-            System.out.println(exception.getMessage());
-        }
+        LoadingWindows.logInClockIn().show();
     }
 
     /**
