@@ -1,6 +1,6 @@
 <h3>/*************************************************************************************************/</h3>
 
-                              <h5>Deprecated program.</h5>
+ <h5>Deprecated program.</h5>
  <h1>PULSE XP SYSTEM</h1> 
  
  <p>It is a fast food order processing platform, featured on both <b><i>desktop</i></b> for stores inside processing and <b><i>web</i></b> for online ordering.</p>
